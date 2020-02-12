@@ -15,6 +15,7 @@ public class repeatingStrings {
                     count++;
                 }
             }
+
             collection.put(array[i], count);
             count = 0;
         }

@@ -10,7 +10,7 @@ public class RepeatingStrings2 {
         int count = 0;
         for (int i = 0; i < array.length; i++) {
             String s = array[i];
-            collection.put(s,count);
+            collection.put(s,count++);
                count++;
         }
 

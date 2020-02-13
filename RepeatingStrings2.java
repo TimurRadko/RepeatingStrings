@@ -9,12 +9,9 @@ public class RepeatingStrings2 {
         Map<String, Integer> collection = new HashMap<>();
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-            collection.put(array[i], count);
-            if (collection.containsKey(array[i])) {
-                count++;
-            }
-
-            //count = 0;
+            String s = array[i];
+            collection.put(s,count);
+               count++;
         }
 
         for (Map.Entry<String, Integer> pair : collection.entrySet()) {

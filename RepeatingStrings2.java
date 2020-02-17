@@ -5,17 +5,17 @@ import java.util.Map;
 
 public class RepeatingStrings2 {
     public static void main(String[] args) {
-        String[] array = {"W", "W", "L", "L", "P", "J", "U", "Y", "R", "E", "P", "Y"};
+        String[] array = {"W", "W", "L", "L", "L", "J", "U", "Y", "R", "E", "P", "Y"};
         Map<String, Integer> collection = new HashMap<>();
-        int count = 1;
         for (int i = 0; i < array.length; i++) {
             String s = array[i];
-            if (collection.containsKey(s)) {
-                collection.put(s,++count);
+            Integer value = collection.get(s);
+            if (value == null) {
+                collection.put(s,1);
             } else {
-                collection.put(s,count);
+                collection.put(s,++value);
             }
-            count = 1;
+
         }
 
         for (Map.Entry<String, Integer> pair : collection.entrySet()) {
@@ -24,6 +24,4 @@ public class RepeatingStrings2 {
             System.out.println(s + " : " + i);
         }
     }
-
-
 }
